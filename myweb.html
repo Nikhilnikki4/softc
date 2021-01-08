@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>softchrome</title>
+    <link rel="stylesheet" type="text/css" href="nihkil.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        footer {
+            background: black;
+            color: aliceblue;
+            text-align: center;
+        }
+        
+        .hyper {
+            background: black;
+            color: aliceblue;
+            padding: 30px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            letter-spacing: 5px;
+        }
+        
+        .hyper span {
+            transition: 0.2s;
+            transition-duration: 1s;
+        }
+        
+        .hyper:hover span:nth-child(1) {
+            margin-right: 7px;
+        }
+        
+        .hyper:hover span:nth-child(2) {
+            margin-right: 5px;
+        }
+        
+        .hyper:hover span:nth-child(1):after {
+            content: "-";
+        }
+        
+        .hyper:hover span {
+            color: #fff;
+            text-shadow: 0 0 50px #fff;
+            0 0 30px #fff,
+            0 0 50px #fff,
+            0 0 90px #fff,
+            0 0 130px #fff,
+            0 0 170px #fff;
+        }
+        
+        section {
+            background: black;
+            color: aqua;
+            padding: 50px;
+            text-align: center;
+        }
+        
+        section img {
+            weight: 200px;
+            height: 200px;
+            border: 2px solid grey;
+            border-radius: 25px;
+            margin: 5px;
+        }
+        
+        #link-d {
+            background: black;
+            color: red;
+            text-align: center;
+            padding: 10px;
+            text-align: 100%;
+            margin: 0;
+        }
+        
+        .slider {
+            width: 1500px;
+            height: 700px;
+            background: url(scene.png);
+            object-fit: cover;
+            margin: 30px auto;
+            animation: slide 20s infinite;
+        }
+        
+        @keyframes slide {
+            25% {
+                background: url(scene1229.png);
+            }
+            50% {
+                background: url(2210.png);
+            }
+            75% {
+                background: url(200222.png);
+            }
+            100% {
+                background: url(200222.png);
+            }
+        }
+        
+        nav {
+            background-color: black;
+            overflow: hidden;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            float: left;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: red;
+            padding: 15px 20px;
+            display: inline-block;
+            font-size: 23px;
+        }
+        
+        nav ul li a:hover {
+            background-color: #fff;
+        }
+        
+        nav ul li a.active {
+            background-color: red;
+        }
+        
+        #loader {
+            position: fixed;
+            overflow: hidden;
+            left: 45%;
+            top: 40%;
+            z-index: 1;
+            width: 100px;
+            height: 100px;
+            margin: -70px 0 0 -70px;
+            border: 14px solid white;
+            border-radius: 50%;
+            border-top: 16px solid black;
+            -webkit-animation: spin 4s linear infinite;
+            animation: spin 4s linear infinite;
+        }
+        
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        /* Add animation to "page content" */
+        
+        .animate-bottom {
+            position: relative;
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1s
+        }
+        
+        @-webkit-keyframes animatebottom {
+            from {
+                bottom: -90px;
+                opacity: 0
+            }
+            to {
+                bottom: 0px;
+                opacity: 1
+            }
+        }
+        
+        @keyframes animatebottom {
+            from {
+                bottom: -90px;
+                opacity: 0
+            }
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+        
+        #myDiv {
+            display: none;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+    <div id="loader"></div>
+
+    <article data-aos="fade-up" data-aos-duration="1500">
+        <header>
+            <h2 class="hyper"><span>S</span>oft<span>chrome</span></h2>
+        </header>
+    </article>
+
+    <nav>
+        <ul>
+            <li><a href="home">HOME</a></li>
+            <li><a href="about sec.html">ABOUT US</a></li>
+            <li><a href="12345.html">SOURCE CODE</a></li>
+            <li><a href="registration.html">REGISTRATION</a></li>
+            <li><a href="Product-Slider-main/index.html">SOFTWARES</a></li>
+            <li><a href="app.html">APPS</a></li>
+        </ul>
+
+    </nav>
+
+
+    <hr>
+    <div class="slider"></div>
+    </div>
+    <hr>
+
+    <div align="center" class="lates-software">
+        <h2>Software</h2>
+
+        <a href="ChromeSetup (2).exe"><img src="google chrome.png" alt="Chrome"></a>
+        <a href="Firefox_Setup_68.0b14.exe"><img src="logo-lg-high-res.fbc7ffbb50fd.png"></a>
+        <a href="Chipset_Driver_DKG7G_WN_9.4.0.1026_A00 - Copy.EXE"><img src="download.png" dell></a>
+        <a href=""><img src="300px-Engine_-_Construct_3_-_logo.png"></a>
+        <a href=""><img src="K7-Computing-Logo-1024x871.png"></a>
+        <a href=""><img src="1562630347799.jpg"></a>
+        <a href=""><img src="1572005248_1509625.jpg"></a>
+        <a href=""><img src="intel-logo-55407e4362234d4b9b67d3db04f4444c.png"></a>
+        <a href=""><img src="Ry2ZrdGl_400x400.jpg"></a>
+        <a href=""><img src="images.png"></a>
+        <a href="AnyDesk.exe"><img src="anydesk.PNG"></a>
+        <a href=""><img src="ps.JPG"></a>
+        <a href=""><img src="python.JPG"></a>
+        <a href=""><img src="QUICK.JPG"></a>
+        <a href=""><img src="atom.JPG"></a>
+        <a href=""><img src="android.JPG"></a>
+        <a href=""><img src="360.JPG"></a>
+        <a href=""><img src="avast.JPG"></a>
+
+
+
+
+
+        <h2>Latest Games</h2>
+        <a href=""><img src="max pyne.jpg"></a>
+        <a href=""><img src="war hunter.jpg"></a>
+        <a href=""><img src="gta 3.jpg"></a>
+        <a href=""><img src="total dose.jpg"></a>
+        <a href=""><img src="angry.JPG"></a>
+        <a href=""><img src="igi counter.jpg"></a>
+        <a href=""><img src="vice city.jpg"></a>
+        <a href=""><img src="sandreaswp1838919.jpg"></a>
+        <a href=""><img src="road-rash.jpg"></a>
+        <a href=""><img src="fallout3.jpeg"></a>
+        <a href=""><img src="hitman-747x420.jpg"></a>
+        <a href=""><img src="Medal-of-honor-allied-dsdassault-1024x576.jpg"></a>
+        <a href=""><img src="tomb.jpg"></a>
+        <a href=""><img src="freefire.jpg"></a>
+
+
+    </div>
+
+    <div align="center " class="lates-software">
+        <h2>Crack apps</h2>
+
+        <a href=""><img src="5db6869d44828.png" alt="Chrome"></a>
+        <a href="Hotstar-TV-v4.0.8-AdFree-YTricks.net.apk"><img src="unnamed (1).png"></a>
+        <a href=""><img src="icon-open-graph.png"></a>
+        <a href="Netflix-SV4-Apkwhale.com.apk"><img src="mx-player-pro-apk-download-featured-e1584783668211.jpg"></a>
+        <a href=""><img src="Vidmate-App-1200x813.png"></a>
+        <a href=""><img src="5244277_041119-cc-disney-plus-key-art-img.jpg"></a>
+        <a href=""><img src="PlayStationVue-logo.png"></a>
+        <a href=""><img src="2-109.jpg"></a>
+        <a href=""><img src="5f2994d85af6cc423a615a54.jpg"></a>
+        <a href=""><img src="DroidCamX-Wireless-Webcam-Pro.png"></a>
+
+
+        <h2>Crack Software</h2>
+        <a href=""><img src="K7-Computing-Logo-1024x871.png"></a>
+        <a href=""><img src="internet download manager.jpg"></a>
+        <a href=""><img src="ps.JPG"></a>
+        <a href=""><img src="filmora hd.jpg"></a>
+        <a href=""><img src="mini.jpg"></a>
+        <a href=""><img src="premier.png"></a>
+        <a href=""><img src="movavi.png"></a>
+        <a href=""><img src="burning rom.png"></a>
+    </div>
+
+    <section>
+        <h3>SOURCE CODE</h3>
+        <a href=""><img src="BASIC.png" alt="basic" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"></a>
+        <a href="New Text Document (2).txt" download="New Text Document (2).txt"><img src="loader.png" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"></a>
+        <a href="New Text Document (4).txt" download="New Text Document (4).txt"><img src="search-box1.png" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"></a>
+        <a href="" download=""><img src="SIMPLE THEME.png" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"></a>
+        <a href="new Text document.txt" download="new Text document.txt"><img src="LOGIN-BOX.png" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"></a>
+        <a href="New Text Document (3).txt" download="New Text Document (3).txt"><img src="REGISTRATION.png" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"></a>
+    </section>
+    <br> <br>
+    <footer>
+
+        <div class="foooter-wrapper ">
+            <div class="single-footer ">
+                <h1>SOFTCHROME</h1>
+                <p>
+                    <h3>
+                        Softchrome private limited.co
+
+                    </h3>
+                </p>
+            </div>
+            <div class="foooter-wrapper ">
+                <div class="single-footer ">
+                    <h1>Navigation</h1>
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li>
+                            <a href="login.html">LOGIN
+                            </a>
+                        </li>
+                        <li><a href="# ">CUSTOMER SRVICES</a></li>
+                        <li><a href="12345.html">PROJECTS</a></li>
+                        <li><a href="# ">TERM AND CONDITION</a></li>
+                    </ul>
+                </div>
+                <div class="foooter-wrapper ">
+                    <div class="single-footer ">
+                        <h1>Get Help</h1>
+                        <ul>
+                            <li>
+                                <a href="youtube.html ">YOUTUBE</a>
+                            </li>
+                            <li><a href="index.html">CHATBOX&#xf086;</a></li>
+                            <li><a href="# ">CERTIFICATION</a></li>
+                            <li><a href="course.html">COURSES</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="foooter-wrapper ">
+                    <div class="single-footer ">
+                        <h1>Address</h1>
+                        <ul>
+                            <li>
+                                Aayodhaya Nagari
+                            </li>
+                            <li>
+                                Mahalaxmi Trolley Works Near PWD
+                            </li>
+                            <li>
+                                Barr,Raipur
+                            </li>
+                            <li>
+                                Pali
+                            </li>
+                            <li>
+                                Rajasthan
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    </footer>
+    <br> <br> <br>
+
+    <div class="google">
+        <p> All right reserved by &copy;SOFTCHROME 2019 &#x2713</p>
+        <p>Created and Maintained By <b>NG</b> Infotech<sup>&reg;</sup></p>
+        <p>Copyright &copy; 2019</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vizceral/4.9.0/vizceral.min.js" integrity="sha512-HIxVdLMHrDHWsddhh2AUN7hNWrxMZU6rMB0wWvTGWsFoUfsuCpHAo39EMwa4Z7AGJTqAkvd/JGjnglidJcS5Yw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-bootstrap/0.5pre/assets/css/bootstrap.min.css"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script>
+        var myVar;
+
+        function myFunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/jquery.lazy.min.js" integrity="sha512-eviLb3jW7+OaVLz5N3B5F0hpluwkLb8wTXHOTy0CyNaZM5IlShxX1nEbODak/C0k9UdsrWjqIBKOFY0ELCCArw==" crossorigin="anonymous"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/filterizr/2.2.4/jquery.filterizr.min.js" integrity="sha512-7g5NUcH79A/d1+q+cj3KTJ31mCUPkD8f58sFEc98H5015295lT+ZBKWkaMeS6Snbu3m2VdfoW4VbSo9hOAJqYw==" crossorigin="anonymous"></script>
+
+    <!--------------------------------------BOOTSTRAP-------------------------------->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+
+    <script src="uikit-3.6.5/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/responsive/1.0.5/responsive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/4.1.3/typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.6/purify.min.js" integrity="sha512-rXAHWSMciPq2KsOxTvUeYNBb45apbcEXUVSIexVPOBnKfD/xo99uUe5M2OOsC49hGdUrkRLYsATkQQHMzUo/ew==" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

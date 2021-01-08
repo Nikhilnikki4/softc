@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>REGISTRATION BOX</title>
+    <link rel="stylesheet" type="text/css" href="registration.css">
+    <link rel="stylesheet" type="text/css" href="uikit-3.6.5/js/uikit.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/authy-forms.js/2.2/form.authy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/jquery.lazy.min.js" integrity="sha512-eviLb3jW7+OaVLz5N3B5F0hpluwkLb8wTXHOTy0CyNaZM5IlShxX1nEbODak/C0k9UdsrWjqIBKOFY0ELCCArw==" crossorigin="anonymous"></script>
+    <script>
+        var myVar;
+
+        function myFunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
+
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+    <div id="loader"></div>
+
+    <div>
+        <form class="monthly">
+            <h1>REGISTRATION HERE!</h1>
+            <table class="monthly-type">
+                <tr>
+                    <td>
+                        <label for="Name">Username</label>
+                    </td>
+                    <td>
+                        <input type="text" name="username" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email Address</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password</label>
+                    </td>
+                    <td>
+                        <input type="password" name="password_1" required>
+                    </td>
+                    <br>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Confirm Password</label>
+                    </td>
+                    <td>
+                        <input type="password" name="password_2" required>
+                    </td>
+                    <br>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <center>
+                                <input type="submit" name="reg_user" value="submit" name="submit">
+                            </center>
+                        </div>
+                    </td>
+
+                </tr>
+
+            </table>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

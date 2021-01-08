@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+     <head>
+         <meta charset="utf-8">
+         <title>Twitter Wall</title>
+         <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
+         <link href="index.css" rel="stylesheet">
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+         <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+ 
+         <script
+             src="https://code.jquery.com/jquery-3.2.1.min.js"
+             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+             crossorigin="anonymous"></script>
+         <script src="profile.js"></script> 
+         <style>
+         body {
+ color: #14171a;
+ font-size: 14px;
+ line-height: 20px;
+}
+ 
+body {
+ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+ 
+ 
+.topbar {
+ background-image: url("https://abs.twimg.com/a/1512226556/img/t1/lohp_streams_header_bg_v4.png");
+ background-size: 100% 100%;
+ border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+ height: 46px;
+ position: relative;
+ width: 100%;
+ text-align:center;
+}
+ 
+body.segoe {
+ font-family: "Segoe UI",Arial,sans-serif;
+}
+ 
+ 
+.topbar .container {
+ max-width: 1190px;
+ height: 100%;
+ text-align: center;
+ width: auto;
+ margin: 0 auto;
+ position: relative;
+}
+ 
+.logocenter{
+ font-size: 23px !important;
+ margin-top: 11px;
+ color:white;
+}
+ 
+.topcontainer{
+ background:#FFF;
+ height: 100%;
+}
+ 
+#submit_button {
+ background-color: #1da1f2;
+ border: 1px solid #1da1f2;
+ border-radius: 100px;
+ box-shadow: none;
+ color: #fff;
+ font-size: 18px;
+ font-weight: bold;
+ height: auto;
+ line-height: 24px;
+ padding: 12px 20px;
+ position: relative;
+ text-align: center;
+ white-space: nowrap;
+ width: 392px;
+}
+ 
+.wallcontainer{
+ width: 900px; overflow: hidden; margin:auto;
+}
+ 
+.profilecard{
+ width: 290px; float: left; background: #FFF; margin: 10px; position: relative;
+}
+ 
+.profilecardhead{
+ background-color:#ff0000;height:95px;
+}
+ 
+.profilecardimagediv{
+ margin:-30px 0 0 8px;padding:1px;background:#FFF;display:inline-block;border-radius:50%;
+}
+ 
+.profilecardimagediv img{
+ width:72px;height:72px;border-radius:50%;box-sizing:border-box;border:2px solid #FFF;
+}
+ 
+.profilecardnameidcont{
+ position:absolute;top:103px;left:90px;width:185px;
+}
+ 
+.profilecardnamecont{
+ font-size:18px;font-weight:bold;line-height:25px;margin:-1px 0 -2px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal
+}
+ 
+#profilecardname{
+ color:inherit;text-transform:uppercase;
+}
+ 
+#profilecarduid{
+ color:#667786;font-size:14px;padding-right:5px;text-transform:uppercase;
+}
+ 
+.profilecardstatsdiv{
+ padding:16px;
+}
+ 
+.profilecardstatslist{
+ table-layout:fixed;box-sizing:border-box;display:table;margin:0;min-width:100%;padding:0;list-style:outside none;
+}
+ 
+.profilecardstatslistitem{
+ width:1%;vertical-align:bottom;display:table-cell;padding:0;box-sizing:border-box;line-height:1;overflow:hidden;transition:all 0.15s ease-in-out 0s;text-align:inherit;
+}
+ 
+.dispblk{
+ display:block;
+}
+ 
+.statslistitemhead{
+ color:#657786;font-size:12px;font-weight:bold;letter-spacing:0,02em;line-height:16px;overflow:hidden;transition:color 0.15s ease-in-out 0s;display:block;
+}
+ 
+.statslistitemcount{
+ display:block;font-size:18px;font-weight:bold;padding-top:3px;transition: color .15s ease-in-out 0s;color:#ff0000;
+}
+ 
+.rightcontainer{
+ width:580px;float:right;margin-top:10px;margin-right:10px;
+}
+ 
+.posttweetcontainer{
+ background:#ffe5e5;padding:10px 12px;position:relative;
+}
+ 
+.posttweetprofimg{
+ width:32px;height:32px;position:absolute;left:28px;top:13px;border-radius:50%;
+}
+ 
+.ml56px{
+ margin-left:56px;
+}
+ 
+.ml58px{
+ margin-left:58px;
+}
+ 
+.mt10px{
+ margin-top: 10px;
+}
+ 
+.posttweettacontainer{
+ border-radius: 8px; border: 1px solid rgb(255, 153, 153); border-image: none; line-height: 20px; box-shadow: 0px 0px 0px 1px #ff9999; background-color: rgb(255, 255, 255);
+}
+ 
+.posttweetta{
+ border-width: 1px 1px 0px; border-style: solid solid none; border-color: rgb(230, 236, 240) rgb(230, 236, 240) currentColor; margin: 0px; padding: 8px; outline: 0px; border-radius: 8px; border-image: none; width: 100%; height: 50px; font-family: "Segoe UI",Arial,sans-serif; font-size: 14px; box-sizing: border-box; opacity: 0.8; background-color: rgb(255, 255, 255);
+}
+ 
+.posttweetcountcont{
+ overflow: hidden; margin-top: 10px;
+}
+ 
+.posttweetcount{
+ margin-right: 10px; display: block; float: right;
+}
+ 
+.posttweetbutcont{
+ overflow: hidden; margin-top: 10px;
+}
+ 
+.posttweetbut{
+ padding: 6px 16px; border-radius: 100px; border: 1px solid rgb(255, 50, 50); border-image: none; text-align: center; color: rgb(255, 255, 255); line-height: 20px; font-size: 14px; font-weight: bold; white-space: nowrap; position: relative; cursor: pointer; float: right; box-shadow: none; background-color: rgb(255, 50, 50);
+}
+ 
+.tweetscontainer{
+ background: rgb(255, 255, 255); list-style: none; margin: 0px; padding: 0px;
+}
+ 
+.tweetcontainer{
+ margin: 0px; padding: 10px; overflow: hidden; border-bottom-color: rgb(230, 236, 240); border-bottom-width: 1px; border-bottom-style: solid;
+}
+ 
+.tweetprofimg{
+ border-radius: 50%; width: 48px; height: 48px; margin-right: 10px; float: left;
+}
+ 
+.tweetprofname{
+ color:#14171a;font-size:14px;font-weight:bold;
+}
+ 
+.tweetprofuid{
+ color:#657786;font-size:14px;margin-left:5px;
+}
+ 
+.tweetstats{
+ margin-right: 30px; cursor: pointer;
+}
+ 
+.tweetstats i{
+ color: rgb(101, 119, 134); font-size: 16px;
+}
+ 
+.tweetstatscount{
+ color: rgb(101, 119, 134); line-height: 1; font-size: 12px; font-weight: bold; margin-left: 6px;
+}
+ 
+.red i, .red span{
+ color:#f00 !important;
+}
+         
+         </style>
+     </head>
+     <body class="segoe" style="background: rgb(230, 236, 240);">
+         <div>
+             <div class="wallcontainer">
+                 <div class="profilecard">
+                     <div class="profilecardhead"></div>
+                     <div class="profilecardimagediv">
+                         <img src="http://3.bp.blogspot.com/-JCYefwq__2U/TxCfC3s1ZpI/AAAAAAAAKcM/u5mw7qPAL0w/s300-c/Camilla-Belle-6.jpg">
+                     </div>
+ 
+                     <div class="profilecardnameidcont">
+                         <div class="profilecardnamecont">
+                             <span id="profilecardname"></span>
+                         </div>
+                         <span id="profilecarduid"></span>
+                     </div>
+ 
+                     <div class="profilecardstatsdiv">
+                         <ul class="profilecardstatslist">
+                             <li class="profilecardstatslistitem">
+                                 <span class="dispblk">
+                                     <span class="statslistitemhead">Tweets</span>
+                                     <span id="statslistitemcount" class="statslistitemcount">0</span>
+                                 </span>
+                             </li>
+ 
+                             <li class="profilecardstatslistitem">
+                                 <span class="dispblk">
+                                     <span class="statslistitemhead">Following</span>
+                                     <span class="statslistitemcount">35</span>
+                                 </span>
+                             </li>
+ 
+                             <li class="profilecardstatslistitem">
+                                 <span class="dispblk">
+                                     <span class="statslistitemhead">Followers</span>
+                                     <span class="statslistitemcount">34</span>
+                                 </span>
+                             </li>
+                         </ul>
+                     </div>
+                 </div>
+ 
+ 
+                 <div class="rightcontainer">
+                     <div class="posttweetcontainer">
+                         <img class="posttweetprofimg" src="http://3.bp.blogspot.com/-JCYefwq__2U/TxCfC3s1ZpI/AAAAAAAAKcM/u5mw7qPAL0w/s300-c/Camilla-Belle-6.jpg">
+                         <div class="ml56px">
+                             <div class="posttweettacontainer">
+                                 <textarea id="posttweetta" class="posttweetta" placeholder="What's happening?"></textarea>
+                                 <div class="posttweetcountcont">
+                                     <span class="posttweetcount"><span id="totalchars">0</span>/250</span>
+                                 </div>
+                             </div>
+                             <div class="posttweetbutcont">
+                                 <button id="posttweetbut" class="posttweetbut">Tweet</button>
+                             </div>
+                         </div>
+                     </div>
+                     <div>
+                         <ul id="tweetscontainer" class="tweetscontainer">
+ 
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </body>
+</html>
